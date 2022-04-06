@@ -1,12 +1,42 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
-  <body>
+  <body class="page__body">
+    <header class="main-header">
+      <a class="main-header__logo logo" href="#">
+        <img class="logo__image" src="#" width="" height="" alt="Логотип магазина Cat Energy">
+      </a>
+      <a class="main-header__logo logo" href="#">
+        <img class="logo__image--mobile" src="#" width="" height="" alt="Логотип магазина Cat Energy">
+      </a>
+      <a class="main-header__logo logo" href="#">
+        <img class="logo__name" src="#" width="" height="" alt="Cat Energy">
+      </a>
+      <nav class="main-navigation">
+        <button class="main-navigation__toggle-open">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <button class="main-navigation__toggle-close">
+          <span class="visually-hidden">Закрыть меню</span>
+        </button>
+        <div class="main-navigation__wrapper">
+          <ul class="main-navigation__list menu">
+            <li class="menu__item menu__item--active">
+              <a class="menu__item-link" href="#">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__item-link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__item-link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
-
+    </header>
   </body>
 </html>
