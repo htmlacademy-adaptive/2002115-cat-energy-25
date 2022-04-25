@@ -43,47 +43,61 @@
       <section class="questionary">
         <h2 class="visually-hidden">Анкета</h2>
         <form class="questionary__form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="questionary__group">
+          <fieldset class="questionary__group questionary__group--bordered">
             <legend class="visually-hidden">Информация о питомце</legend>
-            <label class="questionary__label" for="name">Имя:*</label>
-            <input class="questionary__field" type="text" id="name" name="pet-name" placeholder="Барсик">
-            <label class="questionary__label" for="weight">Вес (кг):*</label>
-            <input class="questionary__field" type="number" id="weight" name="pet-weight" placeholder="7">
-            <label class="questionary__label" for="age">Вес (кг):*</label>
-            <input class="questionary__field" type="number" id="age" name="pet-age" placeholder="7">
+            <ul class="questionary__list">
+              <li class="questionary__item">
+                <label class="questionary__label" for="name">Имя:*</label>
+                <input class="questionary__field" type="text" id="name" name="pet-name" placeholder="Барсик">
+              </li>
+              <li class="questionary__item">
+                <label class="questionary__label" for="weight">Вес (кг):*</label>
+                <input class="questionary__field" type="number" id="weight" name="pet-weight" placeholder="7">
+              </li>
+              <li class="questionary__item">
+                <label class="questionary__label" for="age">Вес (кг):*</label>
+                <input class="questionary__field" type="number" id="age" name="pet-age" placeholder="7">
+              </li>
+            </ul>
           </fieldset>
-          <fieldset class="questionary__group">
+          <fieldset class="questionary__group questionary__group--bordered">
             <legend class="visually-hidden">Цель</legend>
             <ul class="questionary__list">
               <li class="questionary__item">
                 <label class="questionary__control">
                   <span class="questionary__mark questionary__mark--checked"></span>
                   <input class="questionary__radio" type="radio" name="purpose" value="mass-loss" checked>
-                  <span class="questionary__label">Похудение</span>
+                  <span class="questionary__label questionary__label--radio">Похудение</span>
                 </label>
               </li>
               <li class="questionary__item">
                 <label class="questionary__control">
                   <span class="questionary__mark"></span>
                   <input class="questionary__radio" type="radio" name="purpose" value="mass-gain">
-                  <span class="questionary__label">Набор массы</span>
+                  <span class="questionary__label questionary__label--radio">Набор массы</span>
                 </label>
               </li>
               <li class="questionary__item">
                 <label class="questionary__control">
                   <span class="questionary__mark"></span>
                   <input class="questionary__radio" type="radio" name="purpose" value="other">
-                  <span class="questionary__label">Не знаю (Нужен ваш совет)</span>
+                  <span class="questionary__label questionary__label--radio">Не знаю (Нужен ваш совет)</span>
                 </label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="questionary__group">
             <legend class="questionary__legend">Контактные данные (владельца кота)</legend>
-            <label class="questionary__label" for="e-mail">E-mail:*</label>
-            <input class="questionary__field questionary__field--email" type="email" id="e-mail" name="e-mail" placeholder="kuklachev@gmail.com">
-            <label class="questionary__label" for="phone">Телефон:*</label>
-            <input class="questionary__field questionary__field--phone" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90">
+            <ul class="questionary__list">
+              <li class="questionary__item">
+                <label class="questionary__label" for="e-mail">E-mail:*</label>
+                <input class="questionary__field questionary__field--email" type="email" id="e-mail" name="e-mail" placeholder="kuklachev@gmail.com">
+              </li>
+              <li class="questionary__item">          
+                <label class="questionary__label" for="phone">Телефон:*</label>
+                <input class="questionary__field questionary__field--phone" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90">
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="questionary__group">
             <legend class="questionary__legend">Комментарий</legend>
@@ -96,28 +110,28 @@
                 <label class="questionary__control">
                   <span class="questionary__mark questionary__mark--checked"></span>
                   <input class="questionary__checkbox" type="checkbox" name="sweetener" checked>
-                  <span class="questionary__label">Cахарозаменитель</span>
+                  <span class="questionary__label questionary__label--checkbox">Cахарозаменитель</span>
                 </label>
               </li>
               <li class="questionary__item">
                 <label class="questionary__control">
                   <span class="questionary__mark"></span>
                   <input class="questionary__checkbox" type="checkbox" name="water">
-                  <span class="questionary__label">Питьевая вода</span>
+                  <span class="questionary__label questionary__label--checkbox">Питьевая вода</span>
                 </label>
               </li>
               <li class="questionary__item">
                 <label class="questionary__control">
                   <span class="questionary__mark"></span>
                   <input class="questionary__checkbox" type="checkbox" name="milk">
-                  <span class="questionary__label">Молоко</span>
+                  <span class="questionary__label questionary__label--checkbox">Молоко</span>
                 </label>
               </li>
               <li class="questionary__item">
                 <label class="questionary__control">
                   <span class="questionary__mark"></span>
                   <input class="questionary__checkbox" type="checkbox" name="vitamins">
-                  <span class="questionary__label">Витамины</span>
+                  <span class="questionary__label questionary__label--checkbox">Витамины</span>
                 </label>
               </li>
             </ul>
@@ -130,7 +144,7 @@
       </footer>
     </main>
     <footer class="main-footer">
-      <section class="main-footer__contacts contacts">
+      <section class="main-footer__contacts contacts contacts--inner">
         <h2 class="visually-hidden">Контакты</h2>
         <p class="contacts__invitaion">Приглашаем к сотрудничеству дилеров!</p>
         <address class="contacts__address">ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург</address>
