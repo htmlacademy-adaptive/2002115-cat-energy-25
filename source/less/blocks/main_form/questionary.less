@@ -7,15 +7,11 @@
 }
 
 .questionary__group--bordered {
-  border-bottom: 1px solid #D9D9D9;
+  border-bottom: 1px solid @color-border-basic;
  }
 
 .questionary__legend {
-  font-family: "Oswald", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 26px;
-  color: #000000;
+  .font-oswald-regular (24px; 26px; @color-content-basic);
   margin-bottom: 35px;
 }
 
@@ -35,42 +31,30 @@
 }
 
 .questionary__label {
-  font-family: "Oswald", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  color: #444444;
+  .font-oswald-regular (16px; 18px; @color-content-secondary);
   text-transform: uppercase;
   padding-right: 13px;
 }
 
 .questionary__label--radio {
-  color: #222222;
+  color: @color-content-card;
 }
 
 .questionary__label--checkbox {
-  color: #000000;
+  color: @color-content-basic;
 }
 
 .questionary__field {
-  border: 1px solid #E7E7E7;
-  font-family: "Oswald", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  color: #444444;
+  border: 1px solid @color-input-basic;
+  .font-oswald-regular (16px; 18px; @color-content-secondary);
   text-transform: uppercase;
   flex-grow: 1;
   min-width: 100px;
 }
 
 .questionary__textarea {
-  border: 1px solid #E7E7E7;
-  font-family: "Oswald", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  color: #444444;
+  border: 1px solid @color-input-basic;
+  .font-oswald-regular (16px; 18px; @color-content-secondary);
   text-transform: uppercase;
   width: 100%;
   min-height: 150.5px;

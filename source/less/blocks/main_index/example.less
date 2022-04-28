@@ -1,5 +1,5 @@
 .example {
-  background-color: #EAEAEA;
+  background-color: @color-background-example;
   padding: 25px 20px 40px;
 }
 .example__title {
@@ -8,43 +8,27 @@
 }
 
 .example__description {
-  font-family: "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  color: #444444;
+  .font-arial-regular (14px; 18px; @color-content-secondary);
 }
 
 .example__statictics {
   width: 124px;
   height: 56px;
-  border: 1px solid #CDCDCD;
+  border: 1px solid @color-border-extra;
   border-radius: 3px;
 }
 
 .example__parameter {
-  font-family: "Oswald", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 24px;
-  color: #000000;
+  .font-oswald-regular (24px; 24px; @color-content-basic);
   text-align: center;
   text-transform: uppercase;
 }
 
 .example__characteristic {
-  font-family: "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 12px;
-  color: #444444;
+  .font-arial-regular (12px; 12px; @color-content-secondary);
 }
 
 .example__expences {
-  font-family: "Oswald", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  color: #000000;
+  .font-oswald-regular (14px; 20px; @color-content-basic);
   text-transform: uppercase;
 }

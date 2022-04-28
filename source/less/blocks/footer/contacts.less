@@ -1,5 +1,5 @@
 .contacts--secondary {
-  background-color: #F2F2F2;
+  background-color: @color-background-contrast;
 }
 .contacts__wrap {
   display: flex;
@@ -8,22 +8,13 @@
 }
 
 .contacts__invitaion {
-  font-family: "Oswald", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  color: #111111;
+  .font-oswald-regular (16px; 20px; @color-content-contacts);
   text-transform: uppercase;
   margin: 0;
   width: 50%;
 }
 
 .contacts__address {
-  font-family: "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  color: #444444;
+  .font-arial-regular (14px; 20px; @color-content-secondary);
   width: 50%;
 }

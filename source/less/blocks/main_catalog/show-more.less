@@ -1,13 +1,9 @@
 .show-more {
-  border-bottom: 1px solid #EBEBEB;
+  border-bottom: 1px solid @color-border-catalog;
 }
 
 .show-more__title {
-  font-family: "Oswald", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  color: #111111;
+  .font-oswald-regular (16px; 20px; @color-content-contacts);
   text-transform: uppercase;
   text-align: center;
   margin-top: 59px;
@@ -15,11 +11,7 @@
 }
 
 .show-more__description {
-  font-family: "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  color: #444444;
+  .font-arial-regular (12px; 16px; @color-content-secondary);
   text-align: center;
   margin-bottom: 21px;
 }

@@ -6,15 +6,15 @@
 }
 
 .main-footer__links {
-  background-color: #F2F2F2;
+  background-color: @color-background-contrast;
   padding: 39px 20px 22px;
 }
 
 .main-footer__social {
   padding-top: 20px;
   padding-bottom: 20px;
-  border-top: 1px solid #D9D9D9;
-  border-bottom: 1px solid #D9D9D9;
+  border-top: 1px solid @color-border-basic;
+  border-bottom: 1px solid @color-border-basic;
 }
 
 .main-footer__partner {
@@ -28,14 +28,10 @@
   text-decoration: none;
 }
 .main-footer__partner-name {
-  font-family: "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18.4px;
-  color: #444444;
+  .font-arial-regular (16px; 18px; @color-content-secondary);
   margin: 0;
 }
 
 .main-footer__partner-logo {
-  fill: #666666;
+  fill: @color-icon;
 }
