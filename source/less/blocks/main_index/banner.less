@@ -1,0 +1,49 @@
+.banner {
+  width: 100%;
+  margin: 0 auto 20px;
+}
+
+.banner__background {
+  background-image: url("../img/banner-background-mobile.jpg");
+  background-repeat: no-repeat;
+  width: @mobile-width;
+  height: @banner-background-height;
+  order: 1;
+}
+
+.banner__layer {
+  width: 100%;
+  height: 100%;
+  background-color: fade(@color-theme, 85%);
+}
+
+.banner__wrapper {
+  order: 2;
+  margin-top: -1 * @banner-background-height;
+  padding: 27px 20px 0;
+}
+
+.banner__title {
+  margin-top: 0;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.banner__description {
+  .font-oswald-regular (14px; 14px; @color-content-contrast);
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 29px;
+}
+
+.banner__image {
+  display: block;
+  background-color: transparent;
+  margin-bottom: 3px;
+}
+
+.banner__link {
+  display: block;
+  width: @mobile-width - 60px;
+}

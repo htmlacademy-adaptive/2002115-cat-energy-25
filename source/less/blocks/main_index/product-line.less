@@ -1,0 +1,49 @@
+.product-line__wrapper {
+  position: relative;
+  width: 50px;
+}
+
+.prodicut-line__background {
+  width: 50px;
+  height: 50px;
+  background-color: @color-theme;
+  border-radius: 50%;
+}
+
+.product-line__icon {
+  position: absolute;
+
+  &--slim {
+    left: calc(7 / 50 * 100%);
+    bottom: calc(3 / 50 * 100%);
+  }
+
+  &--pro {
+    left: calc(-9.5 / 50 * 100%);
+    bottom: calc(11 / 50 * 100%);
+  }
+}
+
+.product-line__title {
+  .font-oswald-regular (24px; 37px; @color-content-basic);
+  text-transform: uppercase;
+}
+
+.product-line__description {
+  .font-arial-regular (14px; 18px; @color-content-secondary);
+}
+
+.product-line__link {
+  .font-oswald-regular (16px; 16px; @color-content-basic);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.product-line__link::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 12px;
+  background-image: url("../img/product-line-arrow.svg");
+  background-repeat: no-repeat;
+}
