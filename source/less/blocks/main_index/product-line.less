@@ -1,13 +1,28 @@
-.product-line__wrapper {
-  position: relative;
-  width: 50px;
+.product-line {
+  background-color: @color-background-contrast;
+  .padding-standard;
+  .padding-vertical (24px; 18px);
+
+  @media (min-width: @tablet-width) {
+    .padding-horizontal (52px; 28px);
+    .padding-vertical (77px; 53px);
+    display: grid;
+    grid-template-columns: 340px 268px;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+  }
 }
 
-.prodicut-line__background {
+.product-line__background {
+  position: relative;
   width: 50px;
   height: 50px;
   background-color: @color-theme;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    grid-area: 1/2/-1/-1;
+  }
 }
 
 .product-line__icon {
@@ -27,16 +42,32 @@
 .product-line__title {
   .font-oswald-regular (24px; 37px; @color-content-basic);
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    grid-area: 1/1/2/2;
+    margin: 0;
+    .font-oswald-regular (36px; 36px; @color-content-basic);
+  }
 }
 
 .product-line__description {
   .font-arial-regular (14px; 18px; @color-content-secondary);
+
+  @media (min-width: @tablet-width) {
+    grid-area: 2/1/3/2;
+    .font-arial-regular (16px; 24px; @color-content-basic);
+  }
 }
 
 .product-line__link {
   .font-oswald-regular (16px; 16px; @color-content-basic);
   text-decoration: none;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    grid-area: -2/1/-1/2;
+    .font-oswald-regular (20px; 30px; @color-content-basic);
+  }
 }
 
 .product-line__link::after {

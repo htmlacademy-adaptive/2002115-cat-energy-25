@@ -1,0 +1,40 @@
+.range-bar{
+  position: relative;
+}
+
+.range-bar__line {
+  width: 83.5px;
+  height: 12px;
+  background-color: @color-background-basic;
+  border: 1px solid @color-border-extra;
+  border-radius: 6px;
+
+  @media (min-width: @tablet-width) {
+    width: 426px;
+    height: 6px;
+    background-color: @color-range-bar;
+    border: none;
+  }
+}
+
+.range-bar__toggle {
+  position: absolute;
+  top: 4px;
+  left: 6px;
+
+  @media (min-width: @tablet-width) {
+    left: 196px;
+    top: -14px;
+  }
+}
+
+.range-bar__center {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+  }
+}

@@ -1,15 +1,54 @@
 .example {
   background-color: @color-background-example;
-  padding: 25px 20px 40px;
+  .padding-side;
+  .padding-vertical (25px; 40px);
+
+  @media (min-width: @tablet-width) {
+    .padding-vertical (43px; 0);
+    .padding-horizontal (0; 0);
+    background-color: @color-background-basic;
+    border-top: 1px solid @color-border-light;
+  }
 }
 
 .example__title {
-  margin-top: 5px;
-  margin-bottom: 40px;
+  .margin-vertical (0; 40px);
+
+  @media (min-width: @tablet-width) {
+    .padding-side;
+    .margin-vertical (0; 63px);
+  }
 }
 
 .example__description {
   .font-arial-regular (14px; 18px; @color-content-secondary);
+  .margin-vertical (0; 20px);
+
+  @media (min-width: @tablet-width) {
+    .padding-side;
+    .margin-vertical (0; 54px);
+    .font-arial-regular (16px; 24px; @color-content-secondary);
+  }
+}
+
+.example__wrapper {
+  @media (min-width: @tablet-width) {
+    .padding-side;
+    .padding-vertical (0; 250px);
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.example__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .margin-vertical (0; 34px);
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-start;
+  }
 }
 
 .example__statictics {
@@ -17,19 +56,43 @@
   height: 56px;
   border: 1px solid @color-border-extra;
   border-radius: 3px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 42px;
+  }
 }
 
 .example__parameter {
   .font-oswald-regular (24px; 24px; @color-content-basic);
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .font-oswald-regular (30px; 34px; @color-content-basic);
+  }
 }
 
 .example__characteristic {
   .font-arial-regular (12px; 12px; @color-content-secondary);
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    .font-arial-regular (14px; 14px; @color-content-secondary);
+  }
 }
 
 .example__expences {
   .font-oswald-regular (14px; 20px; @color-content-basic);
   text-transform: uppercase;
+  text-align: center;
+  .margin-vertical (0; 40px);
+
+  @media (min-width: @tablet-width) {
+    width: 174px;
+    margin-bottom: 0;
+    margin-left: auto;
+    text-align: right;
+    .font-oswald-regular (20px; 20px; @color-content-basic);
+  }
 }

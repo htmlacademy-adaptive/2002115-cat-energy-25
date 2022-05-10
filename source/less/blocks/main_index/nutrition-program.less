@@ -1,11 +1,12 @@
 .nutrition-program__list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  .list;
 }
 
 .nutrition-program__item {
-  background-color: @color-background-contrast;
-  margin: 0 20px 20px;
-  padding: 24px 20px 18px;
+  .margin-side;
+  .margin-vertical (0; 20px);
+
+  @media (min-width: @tablet-width) {
+    .margin-vertical (0; 30px);
+  }
 }

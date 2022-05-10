@@ -3,18 +3,34 @@
   text-align: center;
   min-width: 128px;
   margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .main-footer__links {
   background-color: @color-background-contrast;
-  padding: 39px 20px 22px;
+  .padding-side;
+  .padding-vertical (39px; 22px);
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    .padding-vertical (58px; 55px);
+  }
 }
 
 .main-footer__social {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  .padding-vertical (20px; 20px);
   border-top: 1px solid @color-border-basic;
   border-bottom: 1px solid @color-border-basic;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    .padding-vertical (4px; 8px);
+  }
 }
 
 .main-footer__partner {
@@ -22,6 +38,12 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 22px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    justify-content: start;
+    align-content: flex-start;
+  }
 }
 
 .main-footer__partner-link {
@@ -31,6 +53,11 @@
 .main-footer__partner-name {
   .font-arial-regular (16px; 18px; @color-content-secondary);
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 22px;
+    .padding-vertical (6px; 10px);
+  }
 }
 
 .main-footer__partner-logo {

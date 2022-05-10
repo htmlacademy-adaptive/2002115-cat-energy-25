@@ -24,3 +24,57 @@
   line-height: @line-height;
   color: @font-color;
 }
+
+.padding-vertical (@padding-top; @padding-bottom) {
+  padding-top: @padding-top;
+  padding-bottom: @padding-bottom;
+}
+
+.padding-horizontal (@padding-left; @padding-right) {
+  padding-left: @padding-left;
+  padding-right: @padding-right;
+}
+
+.padding-standard {
+  .padding-horizontal (20px; 20px);
+}
+
+.padding-side () {
+  .padding-horizontal (20px; 20px);
+
+  @media (min-width: @tablet-width) {
+    .padding-horizontal (30px; 30px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .padding-horizontal (110px; 110px);
+  }
+}
+
+.margin-vertical (@margin-top; @margin-bottom) {
+  margin-top: @margin-top;
+  margin-bottom: @margin-bottom;
+}
+
+.margin-horizontal (@margin-left; @margin-right) {
+  margin-left: @margin-left;
+  margin-right: @margin-right;
+}
+
+.margin-side () {
+  .margin-horizontal (20px; 20px);
+
+  @media (min-width: @tablet-width) {
+    .margin-horizontal (30px; 30px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .margin-horizontal (110px; 110px);
+  }
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

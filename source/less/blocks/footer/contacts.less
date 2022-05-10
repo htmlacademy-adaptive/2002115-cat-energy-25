@@ -5,7 +5,12 @@
 .contacts__wrap {
   display: flex;
   flex-wrap: wrap;
-  padding: 26px 20px;
+  .padding-side;
+  .padding-vertical (26px; 26px);
+
+  @media (min-width: @tablet-width) {
+    padding: 56px 70px;
+  }
 }
 
 .contacts__invitaion {
@@ -18,4 +23,28 @@
 .contacts__address {
   .font-arial-regular (14px; 20px; @color-content-secondary);
   width: 50%;
+
+  @media (min-width: @tablet-width) {
+    text-align: right;
+  }
+}
+
+.contacts__street {
+  margin: 0;
+}
+
+.contacts__city {
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 10px;
+  }
+}
+
+.contacts__map {
+  height: 362px;
+
+  @media (min-width: @tablet-width) {
+    height: 400px;
+  }
 }

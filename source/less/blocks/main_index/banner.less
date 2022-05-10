@@ -9,6 +9,13 @@
   width: @mobile-width;
   height: @banner-background-height;
   order: 1;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
 }
 
 .banner__layer {
@@ -20,13 +27,26 @@
 .banner__wrapper {
   order: 2;
   margin-top: -1 * @banner-background-height;
-  padding: 27px 20px 0;
+  .padding-standard;
+  .padding-vertical (27px; 0);
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    .padding-vertical (0; 0);
+    position: relative;
+  }
 }
 
 .banner__title {
   margin-top: 0;
   margin-bottom: 25px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    .padding-horizontal (87px; 207px);
+    margin-bottom: 41px;
+  }
 }
 
 .banner__description {
@@ -35,15 +55,32 @@
   text-align: center;
   margin-top: 0;
   margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    .font-oswald-regular (20px; 20px; @color-content-basic);
+    text-align: left;
+    padding-left: 87px;
+    margin-bottom: 20px;
+  }
 }
 
 .banner__image {
   display: block;
   background-color: transparent;
   margin-bottom: 3px;
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+  }
 }
 
 .banner__link {
   display: block;
   width: @mobile-width - 60px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    bottom: 100px;
+    left: 91px;
+    width: 224px;
+  }
 }
