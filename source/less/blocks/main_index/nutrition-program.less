@@ -1,12 +1,23 @@
 .nutrition-program__list {
   .list;
+  .margin-side;
+
+  @media (min-width: @desktop-width) {
+    .margin-vertical (0; 71px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
 }
 
 .nutrition-program__item {
-  .margin-side;
   .margin-vertical (0; 20px);
 
   @media (min-width: @tablet-width) {
     .margin-vertical (0; 30px);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
   }
 }

@@ -1,18 +1,16 @@
 .slider {
-  @media (min-width: @tablet-width) {
-    position: relative;
-    background-color: @color-background-example;
-    height: 462px;
-    width: @tablet-width;
-  }
-}
+  background-color: transparent;
 
-.slider__wrapper {
   @media (min-width: @tablet-width) {
     position: absolute;
+    width: 100%;
     bottom: 55px;
-    left: 0;
-    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: static;
+    bottom: 0;
+    width: 591px;
   }
 }
 
@@ -53,7 +51,13 @@
   width: 210px;
   margin: 0 auto;
 
-    @media (min-width: @tablet-width) {
-      width: @slider-width;
-    }
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    box-sizing: border-box;
+    .padding-horizontal (88px; 89px);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }

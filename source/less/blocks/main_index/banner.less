@@ -1,20 +1,29 @@
 .banner {
   width: 100%;
   margin: 0 auto 20px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 82px;
+    display: flex;
+  }
 }
 
 .banner__background {
   background-image: url("../img/banner-background-mobile.jpg");
   background-repeat: no-repeat;
   width: @mobile-width;
-  height: @banner-background-height;
+  height: 302px;
   order: 1;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: calc(@desktop-width - 1px)) {
     display: none;
   }
+
   @media (min-width: @desktop-width) {
-    display: block;
+    background-image: url("../img/banner-background-desktop.jpg");
+    width: 50%;
+    height: 696px;
+    order: 2;
   }
 }
 
@@ -26,8 +35,8 @@
 
 .banner__wrapper {
   order: 2;
-  margin-top: -1 * @banner-background-height;
-  .padding-standard;
+  margin-top: -302px;
+  .padding-side;
   .padding-vertical (27px; 0);
 
   @media (min-width: @tablet-width) {
@@ -35,17 +44,28 @@
     .padding-vertical (0; 0);
     position: relative;
   }
+
+  @media (min-width: @desktop-width) {
+    order: 1;
+    width: 50%;
+    .padding-horizontal (0; 0);
+    .padding-vertical (223px; 185px);
+  }
 }
 
 .banner__title {
-  margin-top: 0;
-  margin-bottom: 25px;
+  .margin-vertical (0; 25px);
   text-align: center;
 
   @media (min-width: @tablet-width) {
     text-align: left;
-    .padding-horizontal (87px; 207px);
+    .padding-horizontal (87px; 200px);
     margin-bottom: 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .margin-vertical (0; 40px);
+    .padding-horizontal (190px; 110px);
   }
 }
 
@@ -53,8 +73,7 @@
   .font-oswald-regular (14px; 14px; @color-content-contrast);
   text-transform: uppercase;
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 29px;
+  .margin-vertical (0; 29px);
 
   @media (min-width: @tablet-width) {
     .font-oswald-regular (20px; 20px; @color-content-basic);
@@ -62,14 +81,26 @@
     padding-left: 87px;
     margin-bottom: 20px;
   }
+
+  @media (min-width: @desktop-width) {
+    .margin-vertical (0; 52px);
+    .padding-horizontal (190px; 110px);
+  }
 }
 
 .banner__image {
   display: block;
   background-color: transparent;
   margin-bottom: 3px;
+
   @media (min-width: @tablet-width) {
     margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 28.25%;
+    right: -54.16%;
   }
 }
 
@@ -82,5 +113,10 @@
     bottom: 100px;
     left: 91px;
     width: 224px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: static;
+    .margin-horizontal (190px; auto);
   }
 }
