@@ -1,7 +1,3 @@
-.contacts--secondary {
-  background-color: @color-background-contrast;
-}
-
 .contacts__container {
   @media (min-width: @desktop-width) {
     position: relative;
@@ -30,6 +26,14 @@
     z-index: 2;
     top: 95px;
     left: 110px;
+  }
+}
+
+.contacts__wrap--secondary {
+  background-color: @color-background-contrast;
+
+  @media (min-width: @desktop-width) {
+    background-color: @color-background-basic;
   }
 }
 
