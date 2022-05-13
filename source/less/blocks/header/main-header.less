@@ -1,4 +1,4 @@
-.main-header {
+.main-header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,14 +11,16 @@
     justify-content: flex-start;
     margin-bottom: 42px;
   }
+
+  @media (min-width: @desktop-width) {
+    .margin-vertical (29px; 0);
+  }
 }
 
-.main-header--index {
+.main-header__container--index {
   @media (min-width: @desktop-width) {
-    .padding-vertical (53px; 29px);
-    position: absolute;
-    width: @desktop-width;
-    box-sizing: border-box;
+    background-color: transparent;
+    margin-bottom: -137px;
   }
 }
 
