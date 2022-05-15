@@ -1,12 +1,35 @@
-.main-header {
+.main-header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px 17.4px;
+  .padding-side;
+  .padding-vertical (10px; 17.4px);
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    .padding-vertical (24px; 20px);
+    justify-content: flex-start;
+    margin-bottom: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .margin-vertical (29px; 0);
+  }
+}
+
+.main-header__container--index {
+  @media (min-width: @desktop-width) {
+    background-color: transparent;
+    margin-bottom: -137px;
+  }
 }
 
 .main-header--secondary {
   border-bottom: 1px solid @color-border-basic;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 }
 
 .main-header__logo {
@@ -16,4 +39,8 @@
 .main-header__toggle {
   border: none;
   background-color: @color-background-basic;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 }

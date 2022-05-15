@@ -1,10 +1,28 @@
 .product-catalog__list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  .list;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    .padding-side;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
 }
 
 .product-catalog__item {
   border-top: 1px solid @color-border-catalog;
-  padding: 19px 20px 25px;
+  .padding-side;
+  .padding-vertical (19px; 25px);
+}
+
+
+.product-catalog__item--dark {
+  @media (min-width: @tablet-width) {
+    border: none;
+    background-color: @color-background-contrast;
+    margin-top: 73px;
+    padding: 0 36px 39px;
+  }
 }

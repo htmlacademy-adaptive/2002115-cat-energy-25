@@ -1,0 +1,16 @@
+.title-decorated {
+  display: inline-block;
+  background-color: @color-background-basic;
+  position: relative;
+}
+
+.title-decorated::after {
+  content: "";
+  .device-width;
+  height: 2px;
+  background-color: @color-theme;
+  position: absolute;
+  top: 60%;
+  left: 0;
+  z-index: -1;
+}

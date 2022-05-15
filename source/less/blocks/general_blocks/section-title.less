@@ -1,7 +1,13 @@
 .section-title {
   .font-oswald-regular (36px; 36px; @color-content-basic);
+
+  @media (min-width: @tablet-width) {
+    .font-oswald-regular (60px; 60px; @color-content-basic);
+  }
 }
 
 .section-title--light {
-  color: @color-content-contrast;
+  @media (max-width: 767px) {
+    color: @color-content-contrast;
+  }
 }

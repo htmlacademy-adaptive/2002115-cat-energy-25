@@ -1,0 +1,23 @@
+.toggle {
+  width: 35.6px;
+  height: 6px;
+  background-color: @color-theme;
+  border: none;
+  border-radius: 6px;
+
+  @media (min-width: @tablet-width) {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid @color-input-secondary;
+    background-color: @color-background-basic;
+    box-sizing: border-box;
+  }
+}
+
+.toggle__center {
+  width: 8px;
+  height: 8px;
+  background-color: @color-theme;
+  border-radius: 50%;
+}
