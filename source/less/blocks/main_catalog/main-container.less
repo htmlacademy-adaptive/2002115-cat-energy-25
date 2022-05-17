@@ -1,6 +1,8 @@
 .main-container__title {
-  margin-top: 27px;
-  margin-bottom: 41px;
-  padding-left: 20px;
-  padding-right: 20px;
+  .margin-vertical (27px; 41px);
+  .padding-side;
+
+  @media (min-width: @desktop-width) {
+    .margin-vertical (74px; 84px);
+  }  
 }
