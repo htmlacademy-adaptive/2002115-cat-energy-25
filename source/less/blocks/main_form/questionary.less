@@ -9,6 +9,11 @@
   border-top: 1px solid @color-border-basic;
   border-bottom: 1px solid @color-border-basic;
   .padding-vertical (22px; 6px);
+
+  @media (min-width: @tablet-width) {
+    .margin-horizontal (71px; 65px);
+    border: 1px solid @color-border-basic;
+  }
 }
 
 .questionary__legend {
@@ -22,6 +27,10 @@
   .padding-side;
   display: flex;
   flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    .padding-horizontal (71px; 65px);
+  }
 }
 
 .questionary__item {
@@ -68,10 +77,33 @@
   width: 100%;
 }
 
+.questionary__field--email {
+  .padding-horizontal (15px; 35px);
+  position: relative;
+  background-image: url("../img/icon-email.svg");
+  background-position: top 50% right 12px;
+  background-repeat: no-repeat;
+
+}
+
+.questionary__field--phone {
+  .padding-horizontal (15px; 35px);
+  position: relative;
+  background-image: url("../img/icon-phone.svg");
+  background-position: top 50% right 12px;
+  background-repeat: no-repeat;
+}
+
+.questionary__container {
+  .padding-side;
+}
+
 .questionary__textarea {
   border: 1px solid @color-input-basic;
+  width: 100%;
+  box-sizing: border-box;
   .font-oswald-regular (16px; 18px; @color-content-secondary);
   text-transform: uppercase;
-  width: 100%;
   min-height: 150.5px;
+  padding: 8px 14px 12px 8px;
 }
