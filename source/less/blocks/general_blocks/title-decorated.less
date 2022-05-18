@@ -1,20 +1,23 @@
 .title-decorated {
-  display: inline-block;
   background-color: @color-background-basic;
-  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: "";
+    width: 100vw;
+    height: 2px;
+    background-color:  @color-theme;
+    position: absolute;    
+    z-index: -1;
+    left: 0;
+    transform: translateY(18px);
+
+    @media (min-width: @tablet-width) {
+      transform: translateY(22px);
+    }
+  }
 }
 
-.title-decorated::after {
-  content: "";
-  .device-width;
-  height: 2px;
-  background-color: @color-theme;
-  position: absolute;
-  top: 60%;
-  left: 0;
-  z-index: -1;
-
-  @media (min-width: @tablet-width) {
-    left: -30px;
-  }
+.title-decorated--legend::after {
+  transform: translateY(12px);
 }

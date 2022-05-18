@@ -1,0 +1,19 @@
+.mark-radio {
+  border: 1px solid @color-input-secondary;
+  border-radius: 50%;
+  position: relative;
+}
+
+.mark-radio--checked::after {
+  content: "";
+  width: 13.5px;
+  height: 13.5px;
+  background-color: @color-theme;
+  border-radius: 50%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}

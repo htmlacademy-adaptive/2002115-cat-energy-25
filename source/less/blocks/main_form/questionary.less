@@ -1,24 +1,25 @@
 .questionary__group {
   border: 0;
-  margin-top: 22px;
-  margin-bottom: 22px;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin: 0;
+  .margin-vertical (0; 16px);
+  padding: 0;
 }
 
 .questionary__group--bordered {
+  border-top: 1px solid @color-border-basic;
   border-bottom: 1px solid @color-border-basic;
+  .padding-vertical (22px; 6px);
 }
 
 .questionary__legend {
   .font-oswald-regular (24px; 26px; @color-content-basic);
-  margin-bottom: 35px;
+  .margin-vertical (0; 34px);
+  .padding-horizontal (20px; 22px);
 }
 
 .questionary__list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  .list;
+  .padding-side;
   display: flex;
   flex-wrap: wrap;
 }
@@ -26,30 +27,45 @@
 .questionary__item {
   margin-bottom: 13px;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   width: 100%;
+}
+
+.questionary__control {
+  display: flex;
+  align-items: center;
+}
+
+.questionary__mark {
+  display: block;
+  width: 30px;
+  height: 30px;
 }
 
 .questionary__label {
   .font-oswald-regular (16px; 18px; @color-content-secondary);
   text-transform: uppercase;
-  padding-right: 13px;
+  margin-right: 12px;
+  white-space: nowrap;
 }
 
 .questionary__label--radio {
   color: @color-content-card;
+  .margin-horizontal (15px; 0);
 }
 
 .questionary__label--checkbox {
   color: @color-content-basic;
+  .margin-horizontal (16px; 0);
 }
 
 .questionary__field {
   border: 1px solid @color-input-basic;
   .font-oswald-regular (16px; 18px; @color-content-secondary);
   text-transform: uppercase;
-  flex-grow: 1;
   min-width: 100px;
+  padding: 13px 15px 14px;
+  width: 100%;
 }
 
 .questionary__textarea {
