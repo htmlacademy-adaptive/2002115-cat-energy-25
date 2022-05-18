@@ -43,57 +43,59 @@
     <main class="main-container">
       <header class="inner-header">
         <h1 class="inner-header__title section-title">Подбор программы</h1>
-        <p class="inner-header__info">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <p class="inner-header__info">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
       </header>
       <section class="questionary">
         <h2 class="visually-hidden">Анкета</h2>
         <form class="questionary__form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="questionary__wrapper">
+            <fieldset class="questionary__group">
+              <legend class="visually-hidden">Информация о питомце</legend>
+              <ul class="questionary__list questionary__list--info">
+                <li class="questionary__item">
+                  <label class="questionary__label" for="name">Имя:*</label>
+                  <input class="questionary__field" type="text" id="name" name="pet-name" placeholder="Барсик">
+                </li>
+                <li class="questionary__item">
+                  <label class="questionary__label" for="weight">Вес (кг):*</label>
+                  <input class="questionary__field" type="number" id="weight" name="pet-weight" placeholder="7">
+                </li>
+                <li class="questionary__item">
+                  <label class="questionary__label" for="age">Возраст (лет):</label>
+                  <input class="questionary__field" type="number" id="age" name="pet-age" placeholder="7">
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="questionary__group questionary__group--bordered">
+              <legend class="visually-hidden">Цель</legend>
+              <ul class="questionary__list questionary__list--radio">
+                <li class="questionary__item">
+                  <label class="questionary__control">
+                    <span class="questionary__mark mark-radio mark-radio--checked"></span>
+                    <input class="questionary__radio visually-hidden" type="radio" name="purpose" value="mass-loss" checked>
+                    <span class="questionary__label questionary__label--radio">Похудение</span>
+                  </label>
+                </li>
+                <li class="questionary__item">
+                  <label class="questionary__control">
+                    <span class="questionary__mark mark-radio"></span>
+                    <input class="questionary__radio visually-hidden" type="radio" name="purpose" value="mass-gain">
+                    <span class="questionary__label questionary__label--radio">Набор массы</span>
+                  </label>
+                </li>
+                <li class="questionary__item">
+                  <label class="questionary__control">
+                    <span class="questionary__mark mark-radio"></span>
+                    <input class="questionary__radio visually-hidden" type="radio" name="purpose" value="other">
+                    <span class="questionary__label questionary__label--radio">Не знаю (Нужен ваш совет)</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
           <fieldset class="questionary__group">
-            <legend class="visually-hidden">Информация о питомце</legend>
-            <ul class="questionary__list">
-              <li class="questionary__item">
-                <label class="questionary__label" for="name">Имя:*</label>
-                <input class="questionary__field" type="text" id="name" name="pet-name" placeholder="Барсик">
-              </li>
-              <li class="questionary__item">
-                <label class="questionary__label" for="weight">Вес (кг):*</label>
-                <input class="questionary__field" type="number" id="weight" name="pet-weight" placeholder="7">
-              </li>
-              <li class="questionary__item">
-                <label class="questionary__label" for="age">Возраст (лет):</label>
-                <input class="questionary__field" type="number" id="age" name="pet-age" placeholder="7">
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="questionary__group questionary__group--bordered">
-            <legend class="visually-hidden">Цель</legend>
-            <ul class="questionary__list">
-              <li class="questionary__item">
-                <label class="questionary__control">
-                  <span class="questionary__mark mark-radio mark-radio--checked"></span>
-                  <input class="questionary__radio visually-hidden" type="radio" name="purpose" value="mass-loss" checked>
-                  <span class="questionary__label questionary__label--radio">Похудение</span>
-                </label>
-              </li>
-              <li class="questionary__item">
-                <label class="questionary__control">
-                  <span class="questionary__mark mark-radio"></span>
-                  <input class="questionary__radio visually-hidden" type="radio" name="purpose" value="mass-gain">
-                  <span class="questionary__label questionary__label--radio">Набор массы</span>
-                </label>
-              </li>
-              <li class="questionary__item">
-                <label class="questionary__control">
-                  <span class="questionary__mark mark-radio"></span>
-                  <input class="questionary__radio visually-hidden" type="radio" name="purpose" value="other">
-                  <span class="questionary__label questionary__label--radio">Не знаю (Нужен ваш совет)</span>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="questionary__group">
-            <legend class="questionary__legend title-decorated title-decorated--legend">Контактные данные<br>(владельца кота)</legend>
-            <ul class="questionary__list">
+            <legend class="questionary__legend title-decorated title-decorated--legend">Контактные данные (владельца кота)</legend>
+            <ul class="questionary__list questionary__list--contacts">
               <li class="questionary__item">
                 <label class="questionary__label" for="e-mail">E-mail:*</label>
                 <input class="questionary__field questionary__field--email" type="email" id="e-mail" name="e-mail" placeholder="kuklachev@gmail.com">
@@ -112,7 +114,7 @@
           </fieldset>
           <fieldset class="questionary__group">
             <legend class="questionary__legend title-decorated title-decorated--legend">Дополнительно</legend>
-            <ul class="questionary__list">
+            <ul class="questionary__list questionary__list--checkbox">
               <li class="questionary__item">
                 <label class="questionary__control">
                   <span class="questionary__mark mark-checkbox mark-checkbox--checked"></span>

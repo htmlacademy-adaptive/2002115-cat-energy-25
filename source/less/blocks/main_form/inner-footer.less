@@ -1,15 +1,38 @@
 .inner-footer {
   .padding-side;
+  margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    .padding-horizontal (71px; 67px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 60px;
+    align-items: center;
+    margin-bottom: 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .padding-side;
+  }
 }
 
 .inner-footer__button {
-  padding: 10px;
-  width: @mobile-width - 40px;
+  padding: 7px;
+  width: 100%;
   margin-bottom: 12px;
+
+  @media (min-width: @tablet-width) {
+    padding: 13px;
+    font-size: 20px;
+  }
 }
 
 .inner-footer__info {
   .font-arial-regular (14px; 16px; @color-content-basic);
   text-align: center;
-  .margin-vertical (0; 32px);
+  
+  @media (min-width: @tablet-width) {
+    .font-arial-regular (16px; 16px; @color-content-basic);
+    text-align: left;
+  }
 }

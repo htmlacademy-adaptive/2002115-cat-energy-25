@@ -3,16 +3,29 @@
   .margin-vertical (27px; 39px);
 
   @media (min-width: @tablet-width) {
-    .padding-horizontal (71px; 0);
+    .padding-horizontal (71px; 67px);
     .margin-vertical (0; 66px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .padding-side;
   }
 }
 
 .inner-header__title {
-  .margin-vertical (0; 54px);
+  .margin-vertical (0; 37px);
+
+  @media (min-width: @tablet-width) {
+    .margin-vertical (0; 54px);
+
+  }
 }
 
 .inner-header__info {
   .font-oswald-regular (14px; 18px; @color-content-basic);
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .font-oswald-regular (20px; 30px; @color-content-basic);
+  }
 }

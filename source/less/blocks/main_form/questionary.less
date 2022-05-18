@@ -1,18 +1,48 @@
 .questionary__group {
   border: 0;
   margin: 0;
-  .margin-vertical (0; 16px);
   padding: 0;
 }
 
 .questionary__group--bordered {
   border-top: 1px solid @color-border-basic;
   border-bottom: 1px solid @color-border-basic;
-  .padding-vertical (22px; 6px);
+  margin-bottom: 26px;
 
   @media (min-width: @tablet-width) {
-    .margin-horizontal (71px; 65px);
-    border: 1px solid @color-border-basic;
+    margin: 0 67px 87px 71px;
+    border: 1px solid @color-input-basic;
+  }
+
+  @media (min-width: @desktop-width) {
+    .margin-vertical (0; 13px);
+    .margin-horizontal (0; 0);
+    padding: 0;
+  }
+}
+
+.questionary__container {
+  .padding-side;
+  margin-bottom: 23px;
+
+  @media (min-width: @tablet-width) {
+    .padding-horizontal (71px; 67px);
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .padding-side;
+    margin-bottom: 67px;
+  }
+}
+
+.questionary__wrapper {
+  @media (min-width: @desktop-width) {
+    .padding-side;
+    margin-bottom: 69px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
   }
 }
 
@@ -20,6 +50,20 @@
   .font-oswald-regular (24px; 26px; @color-content-basic);
   .margin-vertical (0; 34px);
   .padding-horizontal (20px; 22px);
+  max-width: 187px;
+
+  @media (min-width: @tablet-width) {
+    .font-oswald-regular (36px; 36px; @color-content-basic);
+    .padding-horizontal (39px; 42px);
+    margin-left: 30px;
+    .margin-vertical (0; 57px);
+    max-width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    .padding-horizontal (40px; 40px);
+    margin-left: 70px;
+  }
 }
 
 .questionary__list {
@@ -29,7 +73,64 @@
   flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
-    .padding-horizontal (71px; 65px);
+    .padding-horizontal (71px; 67px);
+  }
+}
+
+.questionary__list--info {
+  margin-bottom: 19px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 59px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.questionary__list--radio {
+  .padding-vertical (22px; 7px);
+
+  @media (min-width: @tablet-width) {
+    .padding-horizontal (27px; 27px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .padding-vertical (25px; 12px);
+  }
+}
+
+.questionary__list--contacts {
+  margin-bottom: 11px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .padding-side;
+    margin-bottom: 69px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+  }
+}
+
+.questionary__list--checkbox {
+  margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 41px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .padding-side;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -49,6 +150,11 @@
   display: block;
   width: 30px;
   height: 30px;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .questionary__label {
@@ -56,6 +162,10 @@
   text-transform: uppercase;
   margin-right: 12px;
   white-space: nowrap;
+
+  @media (min-width: @tablet-width) {
+    .font-oswald-regular (20px; 30px; @color-content-secondary);
+  }
 }
 
 .questionary__label--radio {
@@ -75,6 +185,10 @@
   min-width: 100px;
   padding: 13px 15px 14px;
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    .font-oswald-regular (20px; 30px; @color-content-secondary);
+  }
 }
 
 .questionary__field--email {
@@ -94,10 +208,6 @@
   background-repeat: no-repeat;
 }
 
-.questionary__container {
-  .padding-side;
-}
-
 .questionary__textarea {
   border: 1px solid @color-input-basic;
   width: 100%;
@@ -106,4 +216,9 @@
   text-transform: uppercase;
   min-height: 150.5px;
   padding: 8px 14px 12px 8px;
+
+  @media (min-width: @tablet-width) {
+    .font-oswald-regular (20px; 30px; @color-content-secondary);
+    padding: 10px 19px;
+  }
 }

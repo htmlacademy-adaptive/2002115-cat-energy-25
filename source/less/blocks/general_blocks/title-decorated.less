@@ -20,4 +20,9 @@
 
 .title-decorated--legend::after {
   transform: translateY(12px);
+  transform-origin: 0 0;
+
+  @media (min-width: @tablet-width) {
+    transform: translateY(22px);
+  }
 }
