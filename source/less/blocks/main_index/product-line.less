@@ -100,10 +100,17 @@
   .font-oswald-regular (16px; 16px; @color-content-basic);
   text-decoration: none;
   text-transform: uppercase;
-
+  display: flex;
+  align-items: center;
+  max-width: 165px;
+  
   @media (min-width: @tablet-width) {
     grid-area: -2/1/-1/2;
     .font-oswald-regular (20px; 30px; @color-content-basic);
+  }
+
+  &:active {
+    opacity: 30%;
   }
 }
 
@@ -114,4 +121,5 @@
   height: 12px;
   background-image: url("../img/product-line-arrow.svg");
   background-repeat: no-repeat;
+  margin-left: 16px;
 }

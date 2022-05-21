@@ -50,17 +50,35 @@
 
   @media (min-width: @tablet-width) {
     .font-oswald-regular(18px; 24px; @color-content-basic);
-    .padding-vertical (20px; 10px);
+    .padding-vertical (10px; 10px);
   }
 
   @media (min-width: @desktop-width) {
     .font-oswald-regular(20px; 30px; @color-content-basic);
+  }
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+
+  &:focus {
+    outline: 2px solid @color-theme-dark;
+    border-radius: 2px;
   }
 }
 
 .main-navigation__link--light {
   @media (min-width: @desktop-width) {
     color: @color-content-contrast;
+
+    &:focus {
+      outline: 2px solid @color-content-contrast;
+      border-radius: 2px;
+    }
   }
 }
 

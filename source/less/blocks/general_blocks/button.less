@@ -6,6 +6,20 @@
   border: none;
   text-align: center;
   display: block;
+
+  &:hover {
+    background-color: @color-theme-dark;
+  }
+
+  &:active {
+    color: fade(@color-content-contrast, 30%);
+    background-color: @color-theme-dark;
+  }
+
+  &:focus {
+    outline: 2px solid @color-content-basic;
+    outline-offset: -2px;
+  }
 }
 
 .button--banner {
@@ -23,4 +37,13 @@
   background-color: @color-background-contrast;
   color: @color-content-secondary;
   padding: 10px;
+
+  &:hover {
+    background-color: @color-border-catalog;
+  }
+
+  &:active {
+    color: fade(@color-content-secondary, 30%);
+    background-color: @color-border-catalog;
+  }
 }

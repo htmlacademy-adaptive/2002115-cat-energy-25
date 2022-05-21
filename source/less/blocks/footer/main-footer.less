@@ -52,6 +52,10 @@
 
 .main-footer__partner-link {
   text-decoration: none;
+
+  &:active {
+    opacity: 30%;
+  }
 }
 
 .main-footer__partner-name {
@@ -66,4 +70,12 @@
 
 .main-footer__partner-logo {
   fill: @color-icon;
+
+  &:hover {
+    stroke: @color-theme;
+  }
+
+  &:active {
+    stroke: @color-theme;
+  }
 }
