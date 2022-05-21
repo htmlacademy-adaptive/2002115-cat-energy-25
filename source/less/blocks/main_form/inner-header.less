@@ -1,13 +1,30 @@
+.inner-header {
+  .padding-side;
+  .margin-vertical (27px; 39px);
+
+  @media (min-width: @tablet-width) {
+    .padding-horizontal (71px; 67px);
+    .margin-vertical (0; 66px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .padding-side;
+  }
+}
+
 .inner-header__title {
-  margin-top: 27px;
-  margin-bottom: 37px;
-  padding-left: 20px;
-  padding-right: 20px;
+  .margin-vertical (0; 37px);
+
+  @media (min-width: @tablet-width) {
+    .margin-vertical (0; 54px);
+  }
 }
 
 .inner-header__info {
   .font-oswald-regular (14px; 18px; @color-content-basic);
   text-transform: uppercase;
-  padding-left: 20px;
-  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    .font-oswald-regular (20px; 30px; @color-content-basic);
+  }
 }

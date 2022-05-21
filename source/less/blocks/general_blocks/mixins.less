@@ -40,10 +40,10 @@
 }
 
 .padding-side () {
-  .padding-horizontal (20px; 20px);
+  .padding-horizontal (@mobile-side; @mobile-side);
 
   @media (min-width: @tablet-width) {
-    .padding-horizontal (30px; 30px);
+    .padding-horizontal (@tablet-side; @tablet-side);
   }
 
   @media (min-width: @desktop-width) {
@@ -62,14 +62,14 @@
 }
 
 .margin-side () {
-  .margin-horizontal (20px; 20px);
+  .margin-horizontal (@mobile-side; @mobile-side);
 
   @media (min-width: @tablet-width) {
-    .margin-horizontal (30px; 30px);
+    .margin-horizontal (@tablet-side; @tablet-side);
   }
 
   @media (min-width: @desktop-width) {
-    .margin-horizontal (110px; 110px);
+    .margin-horizontal (@desktop-side; @desktop-side);
   }
 }
 
