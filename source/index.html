@@ -10,10 +10,17 @@
     <header class="main-header">
       <div class="main-header__container main-header__container--index container">
         <a class="main-header__logo logo" href="#">
-          <img class="logo__icon" src="img/logo-mobile.svg" width="34" height="38" alt="Cat Energy">
+          <picture>
+            <source media="(min-width: @desktop-width)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: @tablet-width)" srcset="img/logo-tablet.svg">
+            <img class="logo__icon" src="img/logo-mobile.svg" width="34" height="38" alt="Cat Energy">
+          </picture>
         </a>
         <a class="main-header__logo logo" href="#">
-          <img class="logo__name" src="img/logo-name.svg" width="101" height="18" alt="Cat Energy">
+          <picture>
+            <source media="(min-width: @tablet-width)" srcset="img/logo-name-light.svg">
+            <img class="logo__name" src="img/logo-name.svg" width="101" height="18" alt="Cat Energy">
+          </picture>
         </a>
         <button class="main-header__toggle main-header__toggle--close">
           <span class="visually-hidden">Открыть меню</span>
