@@ -46,6 +46,25 @@
   object-fit: contain;
 }
 
+.product-card__image--small {
+  @media (min-width: @tablet-width) {
+    width: 161px;
+    height: 172px;
+  }
+}
+
+.product-card__image--big {
+  @media (min-width: @tablet-width) {
+    width: 168px;
+    height: 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 172px;
+    height: 196px;
+  }
+}
+
 .product-card__button {
   padding: 10px;
   grid-area: 3/1/4/-1;
@@ -58,7 +77,7 @@
   margin: 0;
   max-width: 76px;
   text-decoration: none;
-  .margin-vertical (0; 21px);
+  .margin-vertical (0; 14px);
 
   @media (min-width: @tablet-width) {
     max-width: 150px;

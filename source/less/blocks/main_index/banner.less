@@ -3,12 +3,25 @@
   background-image: url("../img/banner-background-mobile.jpg");
   background-repeat: no-repeat;
   background-position: top left 50%;
+  background-size: 320px 302px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/banner-background-mobile@2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 
   @media (min-width: @desktop-width) {
     background-image: url("../img/banner-background-desktop.jpg");
-    margin-bottom: 82px;
+    .margin-vertical(0; 82px);
     background-position: top right;
+    background-size: 720px 694px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/banner-background-desktop@2x.jpg");
+    }
   }
 }
 
@@ -26,7 +39,7 @@
 
   @media (min-width: @desktop-width) {
     background: linear-gradient(90deg, @color-background-basic 0%, @color-background-basic 50%, fade(@color-theme, 85%) 50%, fade(@color-theme, 85%) 100%);
-    .padding-vertical (141px; 185px);
+    .padding-vertical (141px; 54px);
     .padding-side;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -81,11 +94,15 @@
 
   @media (min-width: @tablet-width) {
     margin: 0 auto;
+    width: 709px;
+    height: 609px;
   }
 
   @media (min-width: @desktop-width) {
     grid-area: 1/2/-1/-1;
-    margin-left: -100px;
+    margin-left: -162px;
+    width: 552px;
+    height: 499px;
   }
 }
 
@@ -94,7 +111,7 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    bottom: 100px;
+    bottom: 526px;
     left: 120px;
     width: 224px;
   }
@@ -102,6 +119,7 @@
   @media (min-width: @desktop-width) {
     position: static;
     margin-left: 90px;
-    grid-area: 3/1/4/2;
+    margin-bottom: 131px;
+    grid-area: 3/1/-1/2;
   }
 }

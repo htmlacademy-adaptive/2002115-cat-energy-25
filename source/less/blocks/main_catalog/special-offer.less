@@ -1,35 +1,54 @@
 .special-offer {
-  background-image: url("../img/offer-background-mobile.jpg");
-  background-repeat: no-repeat;
+  width: 100%;
   height: 290px;
+  background-image: url("../img/offer-background-mobile.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/offer-background-mobile@2x.png");
+  }
 
   @media (min-width: @tablet-width) {
+    height: 200px;
     background-image: url("../img/offer-background-tablet.png");
     background-repeat: no-repeat;
-    height: 200px;
+    background-size: contain;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/offer-background-tablet@2x.png");
+    }
   }
 
   @media (min-width: @desktop-width) {
-    background-image: url("../img/offer-background-mobile.jpg");
+    height: 289px;
+    background-image: url("../img/offer-background-mobile.png");
     background-repeat: no-repeat;
-    height: 290px;
+    background-size: cover;
+    background-position: top left -30px;
+  
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/offer-background-mobile@2x.png");
+    }
   }
 }
 
 .special-offer__container {
   width: 100%;
-  height: 100%;
+  max-height: 290px;
   background-color: fade(@color-theme, 85%);
   .padding-side;
   .padding-vertical (65px; 43px);
 
   @media (min-width: @tablet-width) {
     padding: 70px 77px;
+    max-height: 200px;
   }
 
   @media (min-width: @desktop-width) {
     .padding-vertical (56px; 42px);
     .padding-horizontal (41px; 43px);
+    max-height: 289px;
   }
 }
 
