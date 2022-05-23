@@ -87,6 +87,13 @@
   }
 }
 
+.banner__wrapper {
+  @media (min-width: @desktop-width) {
+    grid-area: 1/2/-1/-1;
+    margin-left: -162px;
+  }
+}
+
 .banner__image {
   display: block;
   background-color: transparent;
@@ -99,8 +106,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-area: 1/2/-1/-1;
-    margin-left: -162px;
+    margin: 0;
     width: 552px;
     height: 499px;
   }
