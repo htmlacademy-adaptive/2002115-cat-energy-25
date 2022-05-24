@@ -1,6 +1,15 @@
 .mark-checkbox {
   border: 1px solid @color-input-secondary;
   position: relative;
+
+  &:hover {
+    border-color: @color-focus-input;
+  }
+
+  &:disabled {
+    border-color: @color-focus-input;
+    opacity: 30%;
+  }
 }
 
 .mark-checkbox--checked::after {
@@ -13,4 +22,13 @@
   right: 0;
   left: 0;
   bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 24px;
+    height: 19px;
+  }
+
+  &:disabled {
+    opacity: 30%;
+  }
 }

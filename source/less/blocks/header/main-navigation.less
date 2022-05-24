@@ -4,11 +4,54 @@
   }
 }
 
+.main-navigation__toggle {
+  border: none;
+  background-color: @color-background-basic;
+  padding: 6px 0 7px;
+  cursor: pointer;
+  width: 24px;
+  height: 32px;
+  box-sizing: border-box;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.main-navigation__icon-close {
+  display: none;
+}
+
+@media (max-width: @mobile-width) {
+  .main-navigation--closed .main-navigation__list {
+    display: none;
+  }
+
+  .main-navigation--opened .main-navigation__list {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .main-navigation--nojs .main-navigation__list {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .main-navigation--nojs .main-navigation__toggle {
+    display: none;
+  }
+}
+
 .main-navigation__list {
   .list;
   display: none;
 
   @media (min-width: @tablet-width) {
+    position: static;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -26,9 +69,9 @@
   border-top: 1px solid @color-border-light;
   width: @mobile-width;
   box-sizing: border-box;
-  background-color: @color-background-basic;
   text-align: center;
   .padding-standard;
+  background-color: @color-background-basic;
 
   @media (min-width: @tablet-width) {
     width: auto;
@@ -41,6 +84,12 @@
   }
 }
 
+.main-navigation__item:last-child {
+  @media (max-width: @mobile-width) {
+    border-bottom: 1px solid @color-border-light;
+  }
+}
+
 .main-navigation__link {
   .font-oswald-medium(20px; 20px; @color-content-basic);
   text-decoration: none;
@@ -50,17 +99,35 @@
 
   @media (min-width: @tablet-width) {
     .font-oswald-regular(18px; 24px; @color-content-basic);
-    .padding-vertical (20px; 10px);
+    .padding-vertical (10px; 10px);
   }
 
   @media (min-width: @desktop-width) {
     .font-oswald-regular(20px; 30px; @color-content-basic);
+  }
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+
+  &:focus {
+    outline: 2px solid @color-theme-dark;
+    border-radius: 2px;
   }
 }
 
 .main-navigation__link--light {
   @media (min-width: @desktop-width) {
     color: @color-content-contrast;
+
+    &:focus {
+      outline: 2px solid @color-content-contrast;
+      border-radius: 2px;
+    }
   }
 }
 
@@ -73,15 +140,5 @@
 .main-navigation__link--current-light {
   @media (min-width: @desktop-width) {
     border-bottom: 2px solid @color-content-contrast;
-  }
-}
-
-.main-header__navigation {
-  position: absolute;
-  top: 100%;
-  left: 0;
-
-  @media (min-width: @tablet-width) {
-    position: static;
   }
 }

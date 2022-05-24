@@ -36,33 +36,57 @@
     left: 0;
     align-self: center;
     justify-self: center;
+    width: 200px;
+    height: 200px;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
     top: 47px;
     left: 52px;
+    width: 100px;
+    height: 100px;
   }
 }
 
 .product-line__icon {
   position: absolute;
+}
 
-  &--slim {
-    left: calc(7 / 50 * 100%);
-    bottom: calc(3 / 50 * 100%);
+.product-line__icon--slim {
+  left: calc(7 / 50 * 100%);
+  bottom: calc(3 / 50 * 100%);
+
+  @media (min-width: @tablet-width) {
+    width: 140.1px;
+    height: 194px;
   }
 
-  &--pro {
-    left: calc(-9.5 / 50 * 100%);
-    bottom: calc(11 / 50 * 100%);
+  @media (min-width: @desktop-width) {
+    width: 70px;
+    height: 97px;
+  }
+}
+
+.product-line__icon--pro {
+  left: calc(-9.5 / 50 * 100%);
+  bottom: calc(11 / 50 * 100%);
+
+  @media (min-width: @tablet-width) {
+    width: 268.1px;
+    height: 112.3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 134px;
+    height: 56.1px;
   }
 }
 
 .product-line__title {
   .font-oswald-regular (24px; 37px; @color-content-basic);
   .margin-vertical (0; 29px);
-  .padding-horizontal (91px; 0);
+  .padding-horizontal (71px; 0);
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
@@ -73,7 +97,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    .padding-horizontal (214px; 0);
+    .padding-horizontal (162px; 0);
     .margin-vertical (0; 73px);
   }
 }
@@ -100,18 +124,47 @@
   .font-oswald-regular (16px; 16px; @color-content-basic);
   text-decoration: none;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  max-width: 168px;
+  .padding-vertical(4px; 4px);
+  margin-top: 15px;
 
   @media (min-width: @tablet-width) {
     grid-area: -2/1/-1/2;
     .font-oswald-regular (20px; 30px; @color-content-basic);
+    margin-top: 0;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+
+  &:active::after {
+    opacity: 30%;
+  }
+
+  &:hover::after {
+    content: "";
+    width: 32px;
   }
 }
 
 .product-line__link::after {
   content: "";
-  display: block;
   width: 24px;
   height: 12px;
+  overflow-x: hidden;
   background-image: url("../img/product-line-arrow.svg");
   background-repeat: no-repeat;
+  background-position: top right;
+  margin-left: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 28px;
+  }
 }

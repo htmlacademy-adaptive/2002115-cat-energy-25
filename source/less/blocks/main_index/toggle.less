@@ -4,6 +4,8 @@
   background-color: @color-theme;
   border: none;
   border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     width: 34px;
@@ -12,6 +14,20 @@
     border: 1px solid @color-input-secondary;
     background-color: @color-background-basic;
     box-sizing: border-box;
+  }
+
+  &:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid @color-theme;
+  }
+
+  &:focus {
+    outline: 2px dotted @color-content-basic;
+    outline-offset: 2px;
   }
 }
 
