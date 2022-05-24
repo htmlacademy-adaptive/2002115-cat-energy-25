@@ -13,7 +13,7 @@
   @media (min-width: @tablet-width) {
     margin: 0 67px 75px 71px;
     border: 1px solid @color-input-basic;
-    .padding-horizontal (27px; 27px);    
+    .padding-horizontal (27px; 27px);
   }
 
   @media (min-width: @desktop-width) {
@@ -105,7 +105,7 @@
   @media (min-width: @tablet-width) {
     padding: 0;
   }
-  
+
   @media (min-width: @desktop-width) {
     padding: 0;
     flex-direction: column;
@@ -128,6 +128,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 80px;
+    align-items: center;
   }
 }
 
@@ -177,9 +178,13 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 20px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 
-.questionary__item--checkbox:not(:last-child)  {
+.questionary__item--checkbox:not(:last-child) {
   margin-bottom: 12px;
 
   @media (min-width: @tablet-width) {
@@ -252,7 +257,7 @@
 .questionary__label--radio {
   color: @color-content-card;
   .margin-horizontal (15px; 0);
-  
+
   @media (min-width: @tablet-width) {
     .margin-horizontal (20px; 0);
   }
@@ -325,47 +330,77 @@
     outline-offset: -2px;
   }
 
-  &:invalid {
-    outline: 2px solid @color-status-error;
-    outline-offset: -2px;
-  }
-
   &:disabled {
     background-color: @color-background-contrast;
     opacity: 30%;
   }
 }
 
-.questionary__field--email {
-  .padding-horizontal (15px; 35px);
-  // position: relative;
-  // background-image: url("../img/icon-email.svg");
-  // background-position: top 50% right 12px;
-  // background-repeat: no-repeat;
+.questionary__field--required {
+  &:invalid {
+    outline: 2px solid @color-status-error;
+    outline-offset: -2px;
+  }
 }
 
-.questionary__field--phone {
-  .padding-horizontal (15px; 35px);
-  // position: relative;
-  // background-image: url("../img/icon-phone.svg");
-  // background-position: top 50% right 12px;
-  // background-repeat: no-repeat;
+.questionary__field--email {
+  .padding-horizontal (15px; 37px);
+
+  @media (min-width: @tablet-width) {
+    .padding-horizontal (20.3px; 43px);
+  }
 }
 
 .questionary__icon--email {
   position: absolute;
-  top: 22px;
-  right: 19px;
-  width: 18px;
-  height: 13px;
+  top: 15px;
+  right: 15px;
+  stroke: @color-content-card;
+
+  @media (min-width: @tablet-width) {
+    top: 18px;
+    right: 18.5px;
+  }
+}
+
+.questionary__field--phone {
+  .padding-horizontal (15.3px; 35px);
+
+  @media (min-width: @tablet-width) {
+    .padding-horizontal (19.5px; 40px);
+  }
 }
 
 .questionary__icon--phone {
   position: absolute;
-  top: 20px;
-  right: 17px;
-  width: 20px;
-  height: 20px;
+  top: 12px;
+  right: 12px;
+  fill: @color-content-basic;
+
+  @media (min-width: @tablet-width) {
+    top: 14px;
+    right: 16px;
+  }
+}
+
+.questionary__field:focus + .questionary__icon--email {
+  stroke: @color-theme;
+}
+
+.questionary__field--required:invalid + .questionary__icon--email {
+  stroke: @color-status-error;
+}
+
+.questionary__field:focus + .questionary__icon--phone {
+  fill: @color-theme;
+}
+
+.questionary__field--required:invalid + .questionary__icon--phone {
+  fill: @color-status-error;
+}
+
+.questionary__field:disabled + .questionary__icon {
+  opacity: 30%;
 }
 
 // Использовать при определении статуса ошибки с помощью JS
@@ -375,12 +410,8 @@
 }
 
 // Использовать при определении статуса ошибки с помощью JS
-// .questionary__icon--error {
-//   fill: @color-status-error;
-// }
-
-.questionary__icon--focus {
-  fill: @color-theme;
+.questionary__icon--error {
+  fill: @color-status-error;
 }
 
 .questionary__textarea {

@@ -51,19 +51,12 @@
 
 .product-line__icon {
   position: absolute;
-
-  &--slim {
-    left: calc(7 / 50 * 100%);
-    bottom: calc(3 / 50 * 100%);
-  }
-
-  &--pro {
-    left: calc(-9.5 / 50 * 100%);
-    bottom: calc(11 / 50 * 100%);
-  }
 }
 
 .product-line__icon--slim {
+  left: calc(7 / 50 * 100%);
+  bottom: calc(3 / 50 * 100%);
+
   @media (min-width: @tablet-width) {
     width: 140.1px;
     height: 194px;
@@ -76,6 +69,9 @@
 }
 
 .product-line__icon--pro {
+  left: calc(-9.5 / 50 * 100%);
+  bottom: calc(11 / 50 * 100%);
+
   @media (min-width: @tablet-width) {
     width: 268.1px;
     height: 112.3px;
@@ -130,10 +126,10 @@
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  max-width: 165px;
+  max-width: 168px;
   .padding-vertical(4px; 4px);
   margin-top: 15px;
-  
+
   @media (min-width: @tablet-width) {
     grid-area: -2/1/-1/2;
     .font-oswald-regular (20px; 30px; @color-content-basic);
@@ -143,14 +139,32 @@
   &:active {
     opacity: 30%;
   }
+
+  &:active::after {
+    opacity: 30%;
+  }
+
+  &:hover::after {
+    content: "";
+    width: 32px;
+  }
 }
 
 .product-line__link::after {
   content: "";
-  display: block;
   width: 24px;
   height: 12px;
+  overflow-x: hidden;
   background-image: url("../img/product-line-arrow.svg");
   background-repeat: no-repeat;
+  background-position: top right;
   margin-left: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 28px;
+  }
 }
