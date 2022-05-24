@@ -5,6 +5,10 @@
   @media (min-width: @tablet-width) {
     .margin-vertical (15px; 25px);
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .advantages__list {
@@ -12,13 +16,13 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 17px 60px;
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: space-between;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 75px;
   }
 }
 
@@ -39,6 +43,7 @@
     margin-bottom: 26px;
   }
 }
+
 
 .advantages__item--leaf::before {
   content: "";
