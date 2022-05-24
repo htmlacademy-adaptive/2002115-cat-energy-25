@@ -6,33 +6,34 @@
   display: block;
   text-align: center;
   min-width: 128px;
-  margin-bottom: 32px;
+  margin-bottom: 29px;
 
   @media (min-width: @tablet-width) {
-    margin: 0;
+    .margin-vertical(5px; 0);
+    margin-right: 155px;
   }
 }
 
 .main-footer__container {
   .padding-side;
-  .padding-vertical (0; 22px);
+  .padding-vertical (0; 20px);
 
   @media (min-width: @tablet-width) {
     display: flex;
-    justify-content: space-between;
     align-content: center;
     .padding-vertical (58px; 55px);
   }
 }
 
 .main-footer__social {
-  .padding-vertical (20px; 20px);
+  .padding-vertical (18px; 16px);
   border-top: 1px solid @color-border-basic;
   border-bottom: 1px solid @color-border-basic;
 
   @media (min-width: @tablet-width) {
     border: none;
     .padding-vertical (4px; 8px);
+    margin-right: 129px;
   }
 }
 
@@ -41,7 +42,6 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 22px;
-  .padding-side;
 
   @media (min-width: @tablet-width) {
     padding: 0;
@@ -61,6 +61,7 @@
 .main-footer__partner-name {
   .font-arial-regular (16px; 18px; @color-content-secondary);
   margin: 0;
+  padding-bottom: 5px;
 
   @media (min-width: @tablet-width) {
     margin-right: 22px;
@@ -77,5 +78,13 @@
 
   &:active {
     fill: @color-theme;
+  }
+}
+
+.main-footer__contacts {
+  margin-bottom: 37px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
   }
 }
