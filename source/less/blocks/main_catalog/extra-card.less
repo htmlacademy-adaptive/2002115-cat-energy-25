@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
-    gap: 25px;
+    gap: 13px;
   }
 
   @media (min-width: @desktop-width) {
@@ -13,8 +13,8 @@
 }
 
 .extra-card__title {
-  margin-top: 0;
-  margin-bottom: 13px;
+  margin-top: -2px;
+  margin-bottom: 3px;
 
   @media (min-width: @tablet-width) {
     grid-area: 1/1/2/2;
@@ -23,29 +23,33 @@
 
   @media (min-width: @desktop-width) {
     margin-right: auto;
+    margin-top: 3px;
   }
 }
 
 .extra-card__table {
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   width: 100%;
 
   @media (min-width: @tablet-width) {
     margin: 0;
     grid-area: 1/2/2/3;
+    align-self: flex-start;
   }
 
   @media (min-width: @desktop-width) {
-    width: 288px;
+    width: 291px;
+    margin-top: 10px;
   }
 }
 
 .extra-card__row {
   .font-arial-regular (14px; 14px; @color-content-secondary);
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     .font-arial-regular (16px; 20px; @color-content-secondary);
-    margin: 0;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -55,8 +59,9 @@
 }
 
 .extra-card__parameter {
+  padding: 0;
+
   @media (min-width: @tablet-width) {
-    .padding-vertical (3px; 0);
     text-align: right;
   }
 
@@ -67,10 +72,10 @@
 
 .extra-card__value {
   text-align: right;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
-    padding-left: 49px;
-    .padding-vertical (3px; 0);
+    padding-left: 45px;
     width: 44px;
   }
 
@@ -95,10 +100,12 @@
 
   @media (min-width: @tablet-width) {
     grid-area: 2/1/3/-1;
+    margin-top: 5px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 244px;
-    margin-left: 38px;
+    width: 224px;
+    margin-top: 0;
+    margin-left: 24px;
   }
 }

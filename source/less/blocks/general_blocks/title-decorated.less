@@ -13,16 +13,26 @@
     transform: translateY(18px);
 
     @media (min-width: @tablet-width) {
+      transform: translateY(23px);
+    }
+
+    @media (min-width: @desktop-width) {
       transform: translateY(22px);
     }
   }
 }
 
 .title-decorated--legend::after {
-  transform: translateY(12px);
+  transform: translateY(14px);
   transform-origin: 0 0;
 
   @media (min-width: @tablet-width) {
-    transform: translateY(22px);
+    transform: translateY(23px);
+  }
+}
+
+.title-decorated--two-line::after {
+  @media (max-width: 767px) {
+    transform: translateY(-11px);
   }
 }

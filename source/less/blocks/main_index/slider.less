@@ -17,6 +17,7 @@
 
   @media (min-width: @tablet-width) {
     border-bottom: 1px dotted @color-button-dotted;
+    .font-oswald-regular (20px; 30px; @color-content-basic);
   }
 
   &:hover {
@@ -42,13 +43,17 @@
   @media (min-width: @tablet-width) {
     width: 592px;
     height: 511px;
-    margin-bottom: 25px;
+    margin-bottom: 33px;
     display: flex;
     justify-content: center;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 28px;
+  }
 }
 
-.slider__image-container--upper {
+.slider__image-upper {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -58,7 +63,7 @@
   }
 }
 
-.slider__image-container--lower {
+.slider__image-lower {
   display: none;
 
   @media (min-width: @tablet-width) {
@@ -77,25 +82,28 @@
 
 .slider__image--skinny {
   @media (min-width: @tablet-width) {
-    object-position: -270px 0;
+    object-position: -270px 2px;
   }
 }
 
 .slider__image--fat {
   @media (min-width: @tablet-width) {
-    object-position: 12px 0;
+    object-fit: cover;
+    object-position: -4px -4px;
   }
 }
 
 .slider__tools {
   display: flex;
   justify-content: space-between;
-  align-items: center center;
+  align-items: center;
+  width: 200px;
   min-height: 32px;
   .padding-horizontal (35px; 35px);
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
+    width: 572px;
     .padding-horizontal (70px; 70px);
   }
 
