@@ -8,23 +8,28 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 32px 60px;
     align-items: center;
-    margin-bottom: 75px;
+    margin-bottom: 50px;
   }
 
   @media (min-width: @desktop-width) {
     .padding-side;
-    margin-bottom: 82px;
+    margin-bottom: 60px;
   }
 }
 
 .inner-footer__button {
-  padding: 7px;
+  padding: 10px;
   width: 100%;
   margin-bottom: 21px;
 
   @media (min-width: @tablet-width) {
-    padding: 13px;
+    width: 282px;
+    padding: 16px;
     font-size: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
   }
 }
 
@@ -36,5 +41,10 @@
   @media (min-width: @tablet-width) {
     .font-arial-regular (16px; 16px; @color-content-basic);
     text-align: left;
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 10px;
   }
 }

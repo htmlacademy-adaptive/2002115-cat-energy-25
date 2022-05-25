@@ -8,27 +8,28 @@
   border-top: 1px solid @color-border-basic;
   border-bottom: 1px solid @color-border-basic;
   margin-bottom: 26px;
-  .padding-vertical (22px; 11px);
+  .padding-vertical (22px; 17px);
 
   @media (min-width: @tablet-width) {
     margin: 0 67px 75px 71px;
     border: 1px solid @color-input-basic;
     .padding-horizontal (27px; 27px);
+    .padding-vertical (26px; 21px);
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    padding: 24px 28px;
+    .padding-vertical (23px; 22px);
   }
 }
 
 .questionary__container {
   .padding-side;
-  margin-bottom: 23px;
+  margin-bottom: 22px;
 
   @media (min-width: @tablet-width) {
     .padding-horizontal (71px; 67px);
-    margin-bottom: 65px;
+    margin-bottom: 64px;
   }
 
   @media (min-width: @desktop-width) {
@@ -40,7 +41,7 @@
 .questionary__wrapper {
   @media (min-width: @desktop-width) {
     .padding-side;
-    margin-bottom: 67px;
+    margin-bottom: 69px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 80px;
@@ -50,7 +51,7 @@
 .questionary__legend {
   .font-oswald-regular (24px; 26px; @color-content-basic);
   .margin-vertical (0; 35px);
-  .padding-horizontal (20px; 22px);
+  .padding-horizontal (20px; 20px);
   max-width: 187px;
 
   @media (min-width: @tablet-width) {
@@ -69,8 +70,14 @@
 }
 
 .questionary__legend--checkbox {
+  margin-bottom: 17px;
+
   @media (min-width: @tablet-width) {
-    margin-bottom: 57px;
+    margin-bottom: 56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 54px;
   }
 }
 
@@ -119,7 +126,7 @@
   margin-bottom: 23.5px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 65px;
+    margin-bottom: 66px;
   }
 
   @media (min-width: @desktop-width) {
@@ -133,19 +140,20 @@
 }
 
 .questionary__list--checkbox {
-  margin-bottom: 34px;
+  margin-bottom: 33px;
 
   @media (min-width: @tablet-width) {
-    .margin-vertical (0; 54px);
+    .margin-vertical (0; 52px);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px 60px;
+    gap: 30px 53px;
   }
 
   @media (min-width: @desktop-width) {
     .padding-side;
-    .margin-vertical (0; 61px);
+    .margin-vertical (0; 60px);
     grid-template-columns: repeat(4, 1fr);
+    gap: 20px 78px;
   }
 }
 
@@ -160,12 +168,12 @@
   margin-bottom: 14px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 20px;
+    margin-bottom: 21px;
   }
 }
 
 .questionary__item--radio:not(:last-child) {
-  margin-bottom: 13px;
+  margin-bottom: 11px;
 
   @media (min-width: @desktop-width) {
     margin: 0;
@@ -176,7 +184,7 @@
   margin-bottom: 14px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
 
   @media (min-width: @desktop-width) {
@@ -185,7 +193,7 @@
 }
 
 .questionary__item--checkbox:not(:last-child) {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
@@ -222,11 +230,11 @@
   margin-right: 12px;
 
   @media (min-width: @tablet-width) {
-    margin-right: 10px;
+    margin-right: 15px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 13px;
+    margin-right: 17px;
   }
 }
 
@@ -238,7 +246,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 14px;
+    margin-right: 20px;
   }
 }
 
@@ -246,11 +254,11 @@
   margin-right: 13px;
 
   @media (min-width: @tablet-width) {
-    margin-right: 14px;
+    margin-right: 16px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 14px;
+    margin-right: 18px;
   }
 }
 
@@ -296,7 +304,7 @@
   .margin-horizontal (16px; 0);
 
   @media (min-width: @tablet-width) {
-    .margin-horizontal (19px; 0);
+    .margin-horizontal (16px; 0);
   }
 
   &:disabled {
@@ -421,11 +429,12 @@
   .font-oswald-regular (16px; 18px; @color-content-secondary);
   text-transform: uppercase;
   min-height: 150.5px;
-  padding: 8px 14px 12px 8px;
+  padding: 10px 15px 15px 14px;
 
   @media (min-width: @tablet-width) {
     .font-oswald-regular (20px; 30px; @color-content-secondary);
     padding: 10px 19px;
+    min-height: 174px;
   }
 
   &:hover {
