@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="./css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
@@ -17,13 +19,7 @@
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="logo__icon" src="img/logo-mobile.svg" width="34" height="38" alt="Cat Energy">
-          </picture>
-        </a>
-        <a class="main-header__logo-name logo" href="index.html">
-          <picture>
-            <source media="(min-width: 768px)" srcset="img/logo-name-light.svg">
-            <img class="logo__name" src="img/logo-name.svg" width="101" height="18" alt="Cat Energy">
+            <img class="logo__icon" src="img/logo-mobile.svg" width="191" height="38" alt="Cat Energy">
           </picture>
         </a>
         <nav class="main-header__navigation main-navigation main-navigation--nojs">
@@ -81,22 +77,22 @@
               <ul class="questionary__list questionary__list--radio">
                 <li class="questionary__item questionary__item--radio">
                   <label class="questionary__control">
-                    <span class="questionary__mark mark-radio mark-radio--checked"></span>
                     <input class="questionary__radio visually-hidden" type="radio" name="purpose" value="mass-loss" checked>
+                    <span class="questionary__mark mark-radio"></span>
                     <span class="questionary__label questionary__label--radio">Похудение</span>
                   </label>
                 </li>
                 <li class="questionary__item questionary__item--radio">
                   <label class="questionary__control">
-                    <span class="questionary__mark mark-radio"></span>
                     <input class="questionary__radio visually-hidden" type="radio" name="purpose" value="mass-gain">
+                    <span class="questionary__mark mark-radio"></span>
                     <span class="questionary__label questionary__label--radio">Набор массы</span>
                   </label>
                 </li>
                 <li class="questionary__item questionary__item--radio">
                   <label class="questionary__control">
-                    <span class="questionary__mark mark-radio"></span>
                     <input class="questionary__radio visually-hidden" type="radio" name="purpose" value="other">
+                    <span class="questionary__mark mark-radio"></span>
                     <span class="questionary__label questionary__label--radio">Не знаю (Нужен ваш совет)</span>
                   </label>
                 </li>
@@ -133,29 +129,29 @@
             <ul class="questionary__list questionary__list--checkbox">
               <li class="questionary__item questionary__item--checkbox">
                 <label class="questionary__control">
-                  <span class="questionary__mark mark-checkbox mark-checkbox--checked"></span>
                   <input class="questionary__checkbox visually-hidden" type="checkbox" name="sweetener" checked>
+                  <span class="questionary__mark mark-checkbox"></span>
                   <span class="questionary__label questionary__label--checkbox">Cахарозаменитель</span>
                 </label>
               </li>
               <li class="questionary__item questionary__item--checkbox">
                 <label class="questionary__control">
-                  <span class="questionary__mark mark-checkbox"></span>
                   <input class="questionary__checkbox visually-hidden" type="checkbox" name="water">
+                  <span class="questionary__mark mark-checkbox"></span>
                   <span class="questionary__label questionary__label--checkbox">Питьевая вода</span>
                 </label>
               </li>
               <li class="questionary__item questionary__item--checkbox">
                 <label class="questionary__control">
-                  <span class="questionary__mark mark-checkbox"></span>
                   <input class="questionary__checkbox visually-hidden" type="checkbox" name="milk">
+                  <span class="questionary__mark mark-checkbox"></span>
                   <span class="questionary__label questionary__label--checkbox">Молоко</span>
                 </label>
               </li>
               <li class="questionary__item questionary__item--checkbox">
                 <label class="questionary__control">
-                  <span class="questionary__mark mark-checkbox"></span>
                   <input class="questionary__checkbox visually-hidden" type="checkbox" name="vitamins">
+                  <span class="questionary__mark mark-checkbox"></span>
                   <span class="questionary__label questionary__label--checkbox">Витамины</span>
                 </label>
               </li>

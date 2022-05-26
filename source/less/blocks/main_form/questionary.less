@@ -220,6 +220,7 @@
   .font-oswald-regular (16px; 18px; @color-content-secondary);
   text-transform: uppercase;
   white-space: nowrap;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     .font-oswald-regular (20px; 30px; @color-content-secondary);
@@ -269,10 +270,6 @@
   @media (min-width: @tablet-width) {
     .margin-horizontal (20px; 0);
   }
-
-  &:disabled {
-    opacity: 30%;
-  }
 }
 
 .questionary__label--email {
@@ -306,10 +303,6 @@
   @media (min-width: @tablet-width) {
     .margin-horizontal (16px; 0);
   }
-
-  &:disabled {
-    opacity: 30%;
-  }
 }
 
 .questionary__field {
@@ -342,6 +335,49 @@
     background-color: @color-background-contrast;
     opacity: 30%;
   }
+}
+
+
+.questionary__radio:disabled + .mark-radio {
+  border-color: @color-focus-input;
+  opacity: 30%;
+}
+
+.questionary__radio:disabled ~ .questionary__label--radio {
+  opacity: 30%;
+}
+
+.questionary__radio:hover + .mark-radio {
+  border-color: @color-focus-input;
+}
+
+.questionary__radio:focus ~ .questionary__label {
+  outline: 2px solid @color-theme;
+}
+
+.questionary__radio:active ~ .questionary__label {
+  color: @color-theme;
+}
+
+.questionary__checkbox:disabled + .mark-checkbox {
+  border-color: @color-focus-input;
+  opacity: 30%;
+}
+
+.questionary__checkbox:disabled ~ .questionary__label--checkbox {
+  opacity: 30%;
+}
+
+.questionary__checkbox:hover + .mark-checkbox {
+  border-color: @color-focus-input;
+}
+
+.questionary__checkbox:focus ~ .questionary__label {
+  outline: 2px solid @color-theme;
+}
+
+.questionary__checkbox:active ~ .questionary__label {
+  color: @color-theme;
 }
 
 .questionary__field--required {
