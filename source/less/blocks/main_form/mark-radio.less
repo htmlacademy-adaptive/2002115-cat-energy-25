@@ -13,7 +13,7 @@
   }
 }
 
-.mark-radio--checked::after {
+.questionary__radio:checked + .mark-radio::after {
   content: "";
   width: 13.5px;
   height: 13.5px;
@@ -29,9 +29,5 @@
   @media (min-width: @tablet-width) {
     width: 18px;
     height: 18px;
-  }
-
-  &:disabled {
-    opacity: 30%;
   }
 }

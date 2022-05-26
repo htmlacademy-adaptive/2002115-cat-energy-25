@@ -1,34 +1,20 @@
 .mark-checkbox {
   border: 1px solid @color-input-secondary;
   position: relative;
-
-  &:hover {
-    border-color: @color-focus-input;
-  }
-
-  &:disabled {
-    border-color: @color-focus-input;
-    opacity: 30%;
-  }
 }
 
-.mark-checkbox--checked::after {
+.questionary__checkbox:checked + .mark-checkbox::after {
   content: url("../img/checkbox-checked.svg");
   width: 18px;
   height: 14px;
   position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   @media (min-width: @tablet-width) {
+    content: url("../img/checkbox-checked-tablet.svg");
     width: 24px;
     height: 19px;
-  }
-
-  &:disabled {
-    opacity: 30%;
   }
 }
