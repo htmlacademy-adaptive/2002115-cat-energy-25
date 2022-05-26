@@ -341,10 +341,14 @@
 .questionary__radio:disabled + .mark-radio {
   border-color: @color-focus-input;
   opacity: 30%;
+  cursor: default;
 }
 
-.questionary__radio:disabled ~ .questionary__label--radio {
+.questionary__radio:disabled ~ .questionary__label--radio,
+.questionary__radio:disabled:active ~ .questionary__label--radio {
+  color: @color-content-basic;
   opacity: 30%;
+  cursor: default;
 }
 
 .questionary__radio:hover + .mark-radio {
@@ -362,10 +366,14 @@
 .questionary__checkbox:disabled + .mark-checkbox {
   border-color: @color-focus-input;
   opacity: 30%;
+  cursor: default;
 }
 
-.questionary__checkbox:disabled ~ .questionary__label--checkbox {
+.questionary__checkbox:disabled ~ .questionary__label--checkbox,
+.questionary__checkbox:disabled:active ~ .questionary__label--checkbox {
+  color: @color-content-basic;
   opacity: 30%;
+  cursor: default;
 }
 
 .questionary__checkbox:hover + .mark-checkbox {
